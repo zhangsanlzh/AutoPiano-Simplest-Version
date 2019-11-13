@@ -1,0 +1,392 @@
+<html data-lt-installed="true">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no">
+    <title>AutoPiano-Electron</title>
+    <link href="css/share.min.css" rel="stylesheet">
+    <style type="text/css">/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */ /* Document ========================================================================== */ /** * 1. Correct the line height in all browsers. * 2. Prevent adjustments of font size after orientation changes in * IE on Windows Phone and in iOS. */ html { line-height: 1.15; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ } /* Sections ========================================================================== */ /** * Remove the margin in all browsers (opinionated). */ body { margin: 0; } /** * Add the correct display in IE 9-. */ article, aside, footer, header, nav, section { display: block; } /** * Correct the font size and margin on `h1` elements within `section` and * `article` contexts in Chrome, Firefox, and Safari. */ h1 { font-size: 2em; margin: .67em 0; } /* Grouping content ========================================================================== */ /** * Add the correct display in IE 9-. * 1. Add the correct display in IE. */ figcaption, figure, main { /* 1 */ display: block; } /** * Add the correct margin in IE 8. */ figure { margin: 1em 40px; } /** * 1. Add the correct box sizing in Firefox. * 2. Show the overflow in Edge and IE. */ hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ } /** * 1. Correct the inheritance and scaling of font size in all browsers. * 2. Correct the odd `em` font sizing in all browsers. */ pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ } /* Text-level semantics ========================================================================== */ /** * 1. Remove the gray background on active links in IE 10. * 2. Remove gaps in links underline in iOS 8+ and Safari 8+. */ a { background-color: transparent; /* 1 */ -webkit-text-decoration-skip: objects; /* 2 */ } /** * 1. Remove the bottom border in Chrome 57- and Firefox 39-. * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */ abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ } /** * Prevent the duplicate application of `bolder` by the next rule in Safari 6. */ b, strong { font-weight: inherit; } /** * Add the correct font weight in Chrome, Edge, and Safari. */ b, strong { font-weight: bolder; } /** * 1. Correct the inheritance and scaling of font size in all browsers. * 2. Correct the odd `em` font sizing in all browsers. */ code, kbd, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ } /** * Add the correct font style in Android 4.3-. */ dfn { font-style: italic; } /** * Add the correct background and color in IE 9-. */ mark { background-color: #ff0; color: #000; } /** * Add the correct font size in all browsers. */ small { font-size: 80%; } /** * Prevent `sub` and `sup` elements from affecting the line height in * all browsers. */ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -.25em; } sup { top: -.5em; } /* Embedded content ========================================================================== */ /** * Add the correct display in IE 9-. */ audio, video { display: inline-block; } /** * Add the correct display in iOS 4-7. */ audio:not([controls]) { display: none; height: 0; } /** * Remove the border on images inside links in IE 10-. */ img { border-style: none; } /** * Hide the overflow in IE. */ svg:not(:root) { overflow: hidden; } /* Forms ========================================================================== */ /** * 1. Change the font styles in all browsers (opinionated). * 2. Remove the margin in Firefox and Safari. */ button, input, optgroup, select, textarea { font-family: sans-serif; /* 1 */ font-size: 100%; /* 1 */ line-height: 1.15; /* 1 */ margin: 0; /* 2 */ } /** * Show the overflow in IE. * 1. Show the overflow in Edge. */ button, input { /* 1 */ overflow: visible; } /** * Remove the inheritance of text transform in Edge, Firefox, and IE. * 1. Remove the inheritance of text transform in Firefox. */ button, select { /* 1 */ text-transform: none; } /** * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video` * controls in Android 4. * 2. Correct the inability to style clickable types in iOS and Safari. */ button, html [type='button'], /* 1 */ [type='reset'], [type='submit'] { -webkit-appearance: button; /* 2 */ } /** * Remove the inner border and padding in Firefox. */ button::-moz-focus-inner, [type='button']::-moz-focus-inner, [type='reset']::-moz-focus-inner, [type='submit']::-moz-focus-inner { border-style: none; padding: 0; } /** * Restore the focus styles unset by the previous rule. */ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focusring, [type='submit']:-moz-focusring { outline: 1px dotted ButtonText; } /** * Correct the padding in Firefox. */ fieldset { padding: .35em .75em .625em; } /** * 1. Correct the text wrapping in Edge and IE. * 2. Correct the color inheritance from `fieldset` elements in IE. * 3. Remove the padding so developers are not caught out when they zero out * `fieldset` elements in all browsers. */ legend { box-sizing: border-box; /* 1 */ color: inherit; /* 2 */ display: table; /* 1 */ max-width: 100%; /* 1 */ padding: 0; /* 3 */ white-space: normal; /* 1 */ } /** * 1. Add the correct display in IE 9-. * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera. */ progress { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ } /** * Remove the default vertical scrollbar in IE. */ textarea { overflow: auto; } /** * 1. Add the correct box sizing in IE 10-. * 2. Remove the padding in IE 10-. */ [type='checkbox'], [type='radio'] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ } /** * Correct the cursor style of increment and decrement buttons in Chrome. */ [type='number']::-webkit-inner-spin-button, [type='number']::-webkit-outer-spin-button { height: auto; } /** * 1. Correct the odd appearance in Chrome and Safari. * 2. Correct the outline style in Safari. */ [type='search'] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ } /** * Remove the inner padding and cancel buttons in Chrome and Safari on macOS. */ [type='search']::-webkit-search-cancel-button, [type='search']::-webkit-search-decoration { -webkit-appearance: none; } /** * 1. Correct the inability to style clickable types in iOS and Safari. * 2. Change font properties to `inherit` in Safari. */ ::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ } /* Interactive ========================================================================== */ /* * Add the correct display in IE 9-. * 1. Add the correct display in Edge, IE, and Firefox. */ details, /* 1 */ menu { display: block; } /* * Add the correct display in all browsers. */ summary { display: list-item; } /* Scripting ==========================================================================
+      */ /** * Add the correct display in IE 9-. */ canvas { display: inline-block; } /** * Add the correct display in IE. */ template { display: none; } /* Hidden ========================================================================== */ /** * Add the correct display in IE 10-. */ [hidden] { display: none; }</style>
+    <style type="text/css">.icon { background-image: url(/static/img/sprite.3c2f760.png); } .icon-alipay { display:inline-block; width: 64px; height: 64px; background-position: 0px 0px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-cherry { display:inline-block; width: 32px; height: 32px; background-position: -64px -64px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-heartbeat { display:inline-block; width: 32px; height: 32px; background-position: -96px -64px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-hot { display:inline-block; width: 32px; height: 32px; background-position: -64px -96px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-pause { display:inline-block; width: 32px; height: 32px; background-position: -96px -96px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-piano { display:inline-block; width: 64px; height: 64px; background-position: -64px 0px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-star { display:inline-block; width: 32px; height: 32px; background-position: -128px 0px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); } .icon-wxpay { display:inline-block; width: 64px; height: 64px; background-position: 0px -64px; vertical-align:top; background-image: url(/static/img/sprite.3c2f760.png); }</style>
+    <style type="text/css">/* 响应式布局 媒体查询 屏幕自适应 */ @media screen and (max-width: 1365px) { #app .responsive-section-a { width: 90%; } } @media screen and (min-width: 1366px) and (max-width: 1599px) { #app .responsive-section-a { width: 87.5%; } } @media screen and (min-width: 1600px) and (max-width: 1919px) { #app .responsive-section-a { width: 85%; } } @media screen and (min-width: 1920px) { #app .responsive-section-a { width: 80%; } #app .component-autopiano .piano-wrap .piano-band { height: 45px; line-height: 45px; background-size: 135px 45px; } } .clearfix { clear: both; *zoom: 1; } .clearfix::before { content: ''; display: block; } .clearfix::after { content: ''; display: table; height: 0; clear: both; } ::-webkit-scrollbar { width: 0px; height: 0px; background-color: #F5F5F5; display: none; } * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-touch-callout: none; /*系统默认菜单被禁用*/ -webkit-user-select: none; /*webkit浏览器*/ /*早期浏览器*/ -moz-user-select: none; /*火狐*/ -ms-user-select: none; /*IE10*/ user-select: none; -webkit-tap-highlight-color: transparent; -webkit-overflow-scrolling: touch; /* 隐藏滚动条，宽度0 */ scrollbar-width: none; } html, body { width: 100%; height: 100%; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: relative; overflow-x: scroll; overflow-y: hidden; color: #373737; } #app { width: 100%; height: 100%; } a { text-decoration: none; color: #373737; }</style>
+    <style type="text/css">.page-pc { width: 100%; min-width: 1280px; height: 100%; padding: 1px; font-family: 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #2c3e50; position: absolute; top: 0; left: 0; overflow-x: scroll; } .page-pc .app-bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -100; opacity: 0.5; background-size: cover; background-repeat: no-repeat; -webkit-transition: all 0.5s linear; transition: all 0.5s linear; } .page-pc .app-content { width: 100%; height: 100%; overflow-y: scroll; position: relative; } .page-pc .app-content .piano-scroll-wrap { overflow: hidden; } .page-pc .app-content .score-section { width: 100%; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; } .page-pc .app-content .section-title { margin: 30px auto 20px; font-size: 28px; font-weight: 500; color: #333; } .page-pc .app-content .right-drawer { width: 500px; height: 100%; position: fixed; top: 0; right: -500px; z-index: 100; border-left: solid 1px #ccc; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; } .page-pc .app-content .right-drawer .trigger { width: 30px; height: 86px; font-size: 16px; text-align: center; padding-top: 7px; position: absolute; top: 50%; left: -32px; background: #EF496F; color: #fff; cursor: pointer; z-index: 101; } .page-pc .app-content .right-drawer .close { width: 20px; height: 20px; line-height: 20px; text-align: center; position: absolute; top: 10px; right: 15px; background: #EF496F; color: #fff; cursor: pointer; z-index: 101; } .page-pc .app-content .right-drawer .component-manual-list { width: 100%; height: 100%; background: rgba(255, 255, 255, 0.9); border-radius: 0; border: none; } .page-pc .app-content .right-drawer.show { right: 0; }</style>
+    <style type="text/css">.component-page-header { width: 100%; height: 60px; line-height: 60px; margin: 10px auto; padding: 0 5%; } .component-page-header .trade-mark { display: block; width: 350px; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: center; -ms-flex-align: center; align-items: center; float: left; } .component-page-header .trade-mark .icon-piano { display: block; -webkit-transform: scale(0.7); transform: scale(0.7); -webkit-transform-origin: 50% 30%; transform-origin: 50% 30%; } .component-page-header .trade-mark .trade-mark-txt { font-size: 28px; font-weight: 500; color: #000; margin: 0 0 0 10px; } .component-page-header .trade-mark .trade-mark-txt .trade-mark-txt--en { font-style: italic; font-size: 20px; color: #666; margin-left: 7px; } .component-page-header .menu { float: right; height: 45px; line-height: 45px; margin-top: 5px; } .component-page-header .menu .menu-item { display: inline-block; width: 80px; margin: 0 7px; text-align: center; position: relative; cursor: pointer; } .component-page-header .menu .menu-item::before { content: ''; width: 100%; height: 1px; position: absolute; left: 0; bottom: 0; -webkit-transform: scaleX(1); transform: scaleX(1); -webkit-transition: 0.3s; transition: 0.3s; background: #ccc; } .component-page-header .menu .menu-item::after { content: ''; width: 100%; height: 5px; position: absolute; left: 0; bottom: 0; -webkit-transform: scaleX(0); transform: scaleX(0); -webkit-transition: 0.3s; transition: 0.3s; background: #1295DB; } .component-page-header .menu .menu-item-active::after { -webkit-transform: scaleX(1); transform: scaleX(1); } .component-page-header .menu .menu-item:hover::after { -webkit-transform: scaleX(1); transform: scaleX(1); }</style>
+    <style type="text/css">.component-random-lyric { width: 100%; min-height: 40px; padding: 5px 0; margin: 0 auto; text-align: center; } .component-random-lyric .lyric { display: inline; line-height: 30px; font-size: 18px; font-style: italic; color: #1F6FB5; cursor: pointer; text-shadow: 2px 2px 8px #fff; } .component-random-lyric .lyric:hover { color: #1295DB; }</style>
+    <style type="text/css">.component-autopiano { width: 100%; position: relative; color: #000; } .component-autopiano #audioEffectCanvas { display: none; } .component-autopiano .piano-scroll-wrap { width: 100%; overflow: scroll; } .component-autopiano .piano-wrap.visible { opacity: 1; } .component-autopiano .piano-wrap { width: 90%; margin: 20px auto; -webkit-box-shadow: 5px 5px 20px 5px #888; box-shadow: 5px 5px 20px 5px #888; border-radius: 5px; position: relative; overflow: hidden; opacity: 0; } .component-autopiano .piano-wrap .piano-band { width: 100%; height: 40px; line-height: 40px; background: #000; -webkit-box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(0, 0, 0, 0.4); box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(0, 0, 0, 0.4); border-width: 3px 2px 2px; border-style: solid; border-color: #555 #222 #111 #777; position: relative; } .component-autopiano .piano-wrap .piano-band .piano-band-img { width: 130px; height: 100%; position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); } .component-autopiano .piano-wrap .piano-band .piano-tip { position: absolute; top: 50%; right: 20px; -webkit-transform: translateY(-50%); transform: translateY(-50%); color: #fff; font-size: 14px; } .component-autopiano .piano-wrap .piano-key-wrap { width: 100%; background: #373737; overflow: hidden; position: relative; } .component-autopiano .piano-wrap .piano-key-wrap .piano-key:hover { cursor: pointer; } .component-autopiano .piano-wrap .piano-key-wrap .wkey { display: inline-block; width: 2.775%; height: 100%; margin: 0 auto; background: #fff; background: linear-gradient(-30deg, #f5f5f5, #fff); border: 1px solid #ccc; -webkit-box-shadow: inset 0 1px 0px #fff, inset 0 -1px 0px #fff, inset 1px 0px 0px #fff, inset -1px 0px 0px #fff, 0 4px 3px rgba(0, 0, 0, 0.7); box-shadow: inset 0 1px 0px #fff, inset 0 -1px 0px #fff, inset 1px 0px 0px #fff, inset -1px 0px 0px #fff, 0 4px 3px rgba(0, 0, 0, 0.7); border-radius: 0 0 5px 5px; position: relative; } .component-autopiano .piano-wrap .piano-key-wrap .wkey:active { -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); top: -1%; height: 99%; background: #efefef; } .component-autopiano .piano-wrap .piano-key-wrap .wkey:active:before { content: ""; border-width: 250px 5px 0px; border-style: solid; border-color: transparent transparent transparent rgba(0, 0, 0, 0.1); position: absolute; left: 0; bottom: 0; } .component-autopiano .piano-wrap .piano-key-wrap .wkey:active:after { content: ""; border-width: 250px 5px 0px; border-style: solid; border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent; position: absolute; right: 0; bottom: 0; } .component-autopiano .piano-wrap .piano-key-wrap .wkey .keytip { width: 100%; color: #373737; text-align: center; font-size: 14px; position: absolute; bottom: 5%; } .component-autopiano .piano-wrap .piano-key-wrap .wkey .keytip .keyname { margin-bottom: 5px; } .component-autopiano .piano-wrap .piano-key-wrap .wkey .keytip .notename { color: #1295DB; font-weight: bold; } .component-autopiano .piano-wrap .piano-key-wrap .wkey-active { -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); top: -1%; height: 99%; background: #efefef; } .component-autopiano .piano-wrap .piano-key-wrap .wkey-active:before { content: ""; border-width: 250px 5px 0px; border-style: solid; border-color: transparent transparent transparent rgba(0, 0, 0, 0.1); position: absolute; left: 0; bottom: 0; } .component-autopiano .piano-wrap .piano-key-wrap .wkey-active:after { content: ""; border-width: 250px 5px 0px; border-style: solid; border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent; position: absolute; right: 0; bottom: 0; } .component-autopiano .piano-wrap .piano-key-wrap .bkey { display: inline-block; width: 10%; height: 70%; background: linear-gradient(-20deg, #333, #000, #333); border-width: 1px 2px 7px; border-style: solid; border-color: #666 #222 #111 #555; border-radius: 0 0 2px 2px; -webkit-box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(0, 0, 0, 0.4); box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(0, 0, 0, 0.4); position: absolute; top: 0; overflow: hidden; } .component-autopiano .piano-wrap .piano-key-wrap .bkey:active { height: 101%; border-bottom-width: 2px; -webkit-box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; } .component-autopiano .piano-wrap .piano-key-wrap .bkey .keytip { width: 100%; color: #fff; position: absolute; left: 0; bottom: 5%; font-size: 14px; overflow: hidden; } .component-autopiano .piano-wrap .piano-key-wrap .bkey .keytip .keyname { width: 100%; text-align: center; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-active { height: 101%; border-bottom-width: 2px; -webkit-box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; } .component-autopiano .piano-wrap .piano-key-wrap .wkey.auto-key-active { -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4); top: 0%; height: 100%; background: #FACC94 !important; } .component-autopiano .piano-wrap .piano-key-wrap .wkey.auto-key-active:before { content: ""; border-width: 250px 5px 0px; border-style: solid; border-color: transparent transparent transparent rgba(0, 0, 0, 0.1); position: absolute; top: 0; left: 0; } .component-autopiano .piano-wrap .piano-key-wrap .wkey.auto-key-active:after { content: ""; border-width: 250px 5px 0px; border-style: solid; border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent; position: absolute; right: 0; left: 0; } .component-autopiano .piano-wrap .piano-key-wrap .bkey.auto-key-active { height: 101%; border-bottom-width: 2px; -webkit-box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.4), 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 2px rgba(0, 0, 0, 0.4), 0 -1px 0px #000; background: #FACC94 !important; } .component-autopiano .piano-wrap .piano-key-wrap .bkey:nth-child(1) { left: 9%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey:nth-child(2) { left: 23%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey:nth-child(3) { left: 50%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey:nth-child(4) { left: 65%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey:nth-child(5) { left: 79%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-wrap { width: 20%; height: 0; position: absolute;
+      top: 0; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-wrap1 { left: 0; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-wrap2 { left: 19.5%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-wrap3 { left: 39%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-wrap4 { left: 58.3%; } .component-autopiano .piano-wrap .piano-key-wrap .bkey-wrap5 { left: 77.7%; } .component-autopiano .piano-options { width: 90%; height: 50px; margin: 10px auto 15px; padding: 0; position: relative; } .component-autopiano .piano-options .option-item-wrap { position: absolute; right: 1%; } .component-autopiano .piano-options .option-item { display: inline-block; height: 50px; line-height: 50px; margin: 0 15px; } .component-autopiano .piano-options .option-item .label > input { display: none; } .component-autopiano .piano-options .option-item .label i { display: inline-block; margin-left: 5px; padding: 2px; width: 40px; height: 20px; border-radius: 13px; vertical-align: middle; -webkit-transition: 0.25s 0.09s; transition: 0.25s 0.09s; position: relative; background: #d8d9db; -webkit-box-sizing: initial; box-sizing: initial; } .component-autopiano .piano-options .option-item .label i:after { content: " "; display: block; width: 20px; height: 20px; border-radius: 50%; background: #fff; position: absolute; left: 2px; -webkit-transition: 0.25s; transition: 0.25s; } .component-autopiano .piano-options .option-item .label > input:checked + i { background: #07E26D; } .component-autopiano .piano-options .option-item .label > input:checked + i:after { -webkit-transform: translateX(20px); transform: translateX(20px); } .component-autopiano .piano-options .option-item .label:hover { cursor: pointer; }</style>
+    <style type="text/css">.score-container.component-manual-list { width: 40%; min-width: 500px; padding-bottom: 50%; font-size: 14px; overflow: hidden; background: rgba(255, 255, 255, 0.6); border-radius: 5px; border: solid 1px #ddd; position: relative; } .score-container.component-manual-list .list-view { width: 100%; height: 100%; position: absolute; top: 0; left: 0; padding: 20px 15px; overflow-y: scroll; } .score-container.component-manual-list .component-title { margin: 0 0 10px 0; font-size: 18px; font-weight: bold; position: relative; } .score-container.component-manual-list .component-title a.join { color: #EF496F; font-size: 14px; margin-left: 5px; text-decoration: underline; } .score-container.component-manual-list .component-title a.join:hover { opacity: 0.8; } .score-container.component-manual-list .component-title .degree { width: 150px; float: right; text-align: left; } .score-container.component-manual-list .list { width: 100%; padding-left: 25px; padding-bottom: 10px; line-height: 32px; } .score-container.component-manual-list .list .list-item { height: 32px; line-height: 32px; list-style: none; } .score-container.component-manual-list .list .list-item a { display: inline-block; min-width: 120px; cursor: pointer; } .score-container.component-manual-list .list .list-item a:hover { color: #1295DB; text-decoration: underline; } .score-container.component-manual-list .list .list-item .num { float: left; width: 35px; height: 32px; font-size: 16px; margin-left: -35px; text-align: center; color: #EF496F; } .score-container.component-manual-list .list .list-item .difficulty-degree { width: 150px; float: right; text-align: left; } .score-container.component-manual-list .list .list-item .difficulty-degree .icon-star { display: inline-block; -webkit-transform: scale(0.7); transform: scale(0.7); margin-left: -6px; } .score-container.component-manual-list .content-wrap { width: 100%; } .score-container.component-manual-list .content-wrap .info { font-size: 14px; margin: 5px 0; height: 28px; line-height: 28px; text-align: center; background: #1295DB; color: #fff; border-radius: 2px; } .score-container.component-manual-list .content-wrap .return-btn { cursor: pointer; width: 80px; height: 32px; line-height: 32px; color: #1F6FB5; } .score-container.component-manual-list .content-wrap .return-btn:hover { text-decoration: underline; color: #1295DB; } .score-container.component-manual-list .content-wrap .author-info { float: right; line-height: 32px; } .score-container.component-manual-list .content-wrap .author-info a { color: #1F6FB5; margin-right: 7px; } .score-container.component-manual-list .content-wrap .score-item-content { word-wrap: break-word; font-size: 16px; letter-spacing: 0; line-height: 26px; } .score-container.component-manual-list .content-wrap .score-item-lyrics { word-wrap: break-word; font-style: italic; margin-top: 20px; line-height: 26px; }</style>
+    <style type="text/css">.score-container.component-auto-list { width: 40%; min-width: 500px; padding-bottom: 50%; font-size: 14px; overflow: hidden; background: rgba(255, 255, 255, 0.6); border-radius: 5px; border: solid 1px #ddd; position: relative; } .score-container.component-auto-list .list-view { width: 100%; height: 100%; position: absolute; top: 0; left: 0; padding: 20px 15px; overflow-y: scroll; } .score-container.component-auto-list .component-title { margin: 0 0 10px 0; font-size: 18px; font-weight: bold; line-height: 26px; position: relative; } .score-container.component-auto-list .component-title .title-img { display: inline-block; width: 26px; vertical-align: middle; } .score-container.component-auto-list .component-title .title { vertical-align: middle; margin-left: 5px; } .score-container.component-auto-list .component-title .degree { width: 150px; float: right; text-align: left; } .score-container.component-auto-list .list { width: 100%; padding-left: 25px; padding-bottom: 10px; line-height: 32px; } .score-container.component-auto-list .list .list-item { height: 32px; line-height: 32px; list-style: none; } .score-container.component-auto-list .list .list-item a { display: inline-block; min-width: 120px; cursor: pointer; } .score-container.component-auto-list .list .list-item .icon-pause { display: inline-block; -webkit-transform: scale(0.6); transform: scale(0.6); cursor: pointer; } .score-container.component-auto-list .list .list-item .icon-pause:hover { opacity: 0.8; } .score-container.component-auto-list .list .list-item a:hover { color: #1295DB; text-decoration: underline; } .score-container.component-auto-list .list .list-item .num { float: left; width: 35px; height: 32px; font-size: 16px; margin-left: -35px; text-align: center; color: #EF496F; } .score-container.component-auto-list .list .list-item .difficulty-degree { width: 150px; float: right; text-align: left; } .score-container.component-auto-list .list .list-item .difficulty-degree .icon-heartbeat { display: inline-block; -webkit-transform: scale(0.7); transform: scale(0.7); margin-left: -6px; } .score-container.component-auto-list .player-view { font-size: 16px; width: 100%; height: 100%; position: absolute; top: 0; left: 0; padding: 20px 15px; overflow-y: scroll; } .score-container.component-auto-list .player-view .top-bar .return-btn { cursor: pointer; width: 80px; height: 32px; line-height: 32px; font-size: 14px; color: #1F6FB5; } .score-container.component-auto-list .player-view .top-bar .return-btn:hover { text-decoration: underline; color: #1295DB; } .score-container.component-auto-list .player-view .top-bar h2 { font-size: 18px; } .score-container.component-auto-list .player-view .cd-box { width: 400px; margin: 15% auto 10px; padding: 10px; border-radius: 15px; position: relative; } .score-container.component-auto-list .player-view .cd-box .cd-reader-1 { width: 100px; height: 10px; border-radius: 5px; background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(#aaa), to(#333)); background: linear-gradient(to right, #333, #aaa, #333); -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(60deg); transform: rotate(60deg); position: absolute; top: 10px; left: 10px; } .score-container.component-auto-list .player-view .cd-box .cd-reader-1::before { content: ''; width: 20px; height: 20px; border-radius: 50%; background: #888; position: absolute; top: -6px; left: -6px; border: solid 2px #444; } .score-container.component-auto-list .player-view .cd-box .cd-reader-2 { width: 80px; height: 10px; border-radius: 5px; background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(#666), to(#888)); background: linear-gradient(to right, #333, #666, #888); -webkit-transform: rotate(20deg); transform: rotate(20deg); position: absolute; top: 105px; left: 50px; z-index: 10; } .score-container.component-auto-list .player-view .cd-box .cd { width: 220px; height: 220px; margin: 0 auto; border-radius: 50%; border: solid 5px #ccc; background: -webkit-gradient(linear, left top, right top, from(#000), color-stop(#555), to(#000)); background: linear-gradient(to right, #000, #555, #000); position: relative; } .score-container.component-auto-list .player-view .cd-box .cd .cd-inner { width: 70px; height: 70px; line-height: 65px; border-radius: 50%; border: solid 3px #aaa; background: #CD3F11; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; text-align: center; color: #fff; font-size: 12px; } .score-container.component-auto-list .player-view .music-name { text-align: center; padding: 15px 0 5px; font-size: 20px; font-weight: bold; } .score-container.component-auto-list .player-view .difficulty-degree { text-align: center; } .score-container.component-auto-list .player-view .difficulty-degree .icon-heartbeat { display: inline-block; -webkit-transform: scale(0.7); transform: scale(0.7); margin-left: -6px; } .score-container.component-auto-list .player-view .control-bar { width: 100%; text-align: center; padding: 15px 0; } .score-container.component-auto-list .player-view .control-bar .stop-btn { display: inline-block; width: 70px; height: 30px; line-height: 30px; background: #EF496F; color: #fff; cursor: pointer; } .score-container.component-auto-list .player-view .control-bar .stop-btn:hover { opacity: 0.8; } @-webkit-keyframes spin { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } } @keyframes spin { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }</style>
+    <style type="text/css">.component-commodity-list { width: 100%; height: auto; margin: 30px auto; padding: 0; text-align: center; letter-spacing: -20px; background: rgba(255, 255, 255, 0.6); border-radius: 5px; overflow: visible; white-space: nowrap; position: relative; } .component-commodity-list .scroll-wrap { width: 100%; padding: 20px 0; overflow: scroll; } .component-commodity-list .card-wrap { display: inline-block; width: 20%; margin: 0 2.5%; -webkit-box-shadow: 1px 1px 10px 1px #ddd; box-shadow: 1px 1px 10px 1px #ddd; border-radius: 5px; overflow: hidden; letter-spacing: normal; } .component-commodity-list .arrow { width: 35px; height: 35px; border-top: solid 6px rgba(239, 73, 111, 0.5); border-right: solid 6px rgba(239, 73, 111, 0.5); position: absolute; top: calc(50% - 17.5px); cursor: pointer; } .component-commodity-list .arrow:hover { border-color: rgba(239, 73, 111, 0.8); } .component-commodity-list .left-arrow { left: -10px; -webkit-transform: rotate(225deg); transform: rotate(225deg); } .component-commodity-list .right-arrow { right: -10px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }</style>
+    <style type="text/css">.component-commodity-card { display: inline-block; width: 100%; height: auto; font-size: 14px; text-align: left; background: #fff; } .component-commodity-card .pic-wrap { width: 100%; padding: 10px 20px; overflow: hidden; } .component-commodity-card .pic-wrap .pic { width: 100%; } .component-commodity-card .card-section { padding: 5px 8px; } .component-commodity-card .commodity-name { display: block; width: 100%; font-weight: bold; text-overflow: ellipsis; overflow: hidden; word-break: break-all; white-space: nowrap; } .component-commodity-card .commodity-name:hover { text-decoration: underline; } .component-commodity-card .em { color: #EF496F; font-weight: bold; } .component-commodity-card .price { float: left; } .component-commodity-card .price .price-info { font-size: 12px; color: #888; } .component-commodity-card .sale-count { float: right; } .component-commodity-card .seller-name { font-size: 12px; color: #888; } .component-commodity-card .btn-wrap { text-align: center; padding: 5px 0 15px; } .component-commodity-card .link-btn { display: inline-block; width: 100px; height: 26px; line-height: 26px; border-radius: 13px; background: #EF496F; color: #fff; text-align: center; cursor: pointer; } .component-commodity-card .link-btn:hover { opacity: 0.8; }</style>
+    <style type="text/css">.component-page-footer { width: 100%; min-width: 1280px; height: 40px; line-height: 40px; background: rgba(255, 255, 255, 0.8); border-top: solid 1px #ccc; position: fixed; bottom: 0; text-align: center; } .component-page-footer .footer-ul { width: auto; height: 100%; } .component-page-footer .footer-ul .footer-item { display: inline; list-style: none; position: relative; } .component-page-footer .footer-ul .footer-item a:hover { color: #fff; background: #1295DB; } .component-page-footer .footer-ul .footer-item a.em { color: #EF496F; } .component-page-footer .footer-ul .footer-item a.em:hover { color: #fff; background: #EF496F; } .component-page-footer .footer-ul.left-section { float: left; margin-left: 5%; } .component-page-footer .footer-ul.right-section { float: right; margin-right: 5%; } .component-page-footer .popup-container { width: 200px; height: 260px; position: absolute; top: -285px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 200; background: #ffffff; -webkit-box-shadow: 1px 1px 10px 1px #ddd; box-shadow: 1px 1px 10px 1px #ddd; } .component-page-footer .popup-container::after { content: ''; width: 20px; height: 20px; position: absolute; left: 50%; bottom: -10px; -webkit-transform: translateX(-50%) rotate(45deg); transform: translateX(-50%) rotate(45deg); z-index: 150; background: #ffffff; } .component-page-footer .popup-container .tab-wrap { width: 100%; height: 60px; } .component-page-footer .popup-container .tab-wrap .tab { width: 50%; height: 100%; float: left; cursor: pointer; } .component-page-footer .popup-container .tab-wrap .tab.active-tab { border-bottom: solid 5px #1295DB; } .component-page-footer .popup-container .tab-wrap .tab .icon { -webkit-transform: scale(0.5); transform: scale(0.5); -webkit-transform-origin: 50% 0; transform-origin: 50% 0; margin-top: 14px; } .component-page-footer .popup-container .qrcode-wrap { width: 100%; padding: 12px 18px; } .component-page-footer .popup-container .qrcode-wrap .money { width: 100%; height: 14px; line-height: 14px; font-size: 14px; margin: 0; } .component-page-footer .popup-container .qrcode-wrap .qrcode { width: 100%; }</style>
+    <style type="text/css">.page-links { width: 100%; min-width: 1280px; height: 100%; padding: 1px; font-family: 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #2c3e50; position: absolute; top: 0; left: 0; overflow-x: scroll; } .page-links .app-bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -100; opacity: 0.5; background-size: cover; background-repeat: no-repeat; -webkit-transition: all 0.5s linear; transition: all 0.5s linear; } .page-links .app-content { width: 100%; height: 100%; overflow-y: scroll; position: relative; } .page-links .app-content .links-wrap { width: 1100px; margin: 50px auto; border-radius: 5px; overflow: hidden; } .page-links .app-content .links-wrap .left-section { width: 70%; min-height: 450px; padding: 14px 0 0 16px; float: left; background: rgba(255, 255, 255, 0.5); } .page-links .app-content .links-wrap .left-section h2 { color: #1295DB; font-weight: 400; font-size: 22px; } .page-links .app-content .links-wrap .left-section dl.links-list { padding: 20px 0; } .page-links .app-content .links-wrap .left-section dl.links-list .link-item { width: 230px; float: left; padding: 3px 10px; margin: 0 5px 15px 0; } .page-links .app-content .links-wrap .left-section dl.links-list .link-item dt { font-weight: 400; font-size: 16px; } .page-links .app-content .links-wrap .left-section dl.links-list .link-item dt a { display: inline-block; border-bottom: solid 1px #EF496F; } .page-links .app-content .links-wrap .left-section dl.links-list .link-item dt a:hover { color: #EF496F; } .page-links .app-content .links-wrap .left-section dl.links-list .link-item dd { margin-top: 7px; color: #555; font-size: 13px; } .page-links .app-content .links-wrap .left-section dl.links-list .textclip { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } .page-links .app-content .links-wrap .right-section { width: 30%; min-height: 450px; padding: 13px 0 0 15px; float: left; background: rgba(255, 255, 255, 0.8); } .page-links .app-content .links-wrap .right-section .info { margin: 0 10px 20px 0; } .page-links .app-content .links-wrap .right-section .info h2 { margin: 5px 0 10px; border-left: 3px solid #1295DB; text-indent: 10px; font-size: 16px; } .page-links .app-content .links-wrap .right-section .info li { list-style: circle inside; font-size: 14px; line-height: 23px; color: #000; -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; } .page-links .app-content .links-wrap .right-section .info span { font-size: 13px; color: #555; -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; }</style></head>
+  <body>
+    <div id="app">
+      <div class="page-pc">
+        <div class="app-bg" style="background-image: url(&quot;bg_default.jpg&quot;);"></div>
+        <div class="app-content">
+          <div class="component-random-lyric">
+          <div class="component-autopiano">
+            <div class="piano-scroll-wrap">
+              <div class="piano-wrap responsive-section-a visible">
+                <div class="piano-band">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAA9BAMAAAAqpSomAAAAMFBMVEUAAAD///8gICB/f38/Pz+/v7+fn5/f399eXl7r6+uMjIxXV1e3t7fPz8+bm5tzc3N0mYyLAAAEjUlEQVRYw+1Xy5LSQBS9Nh0mZZWlGeSxzBgFl+HhyDI45VDlijAwuuQ16FIYX8vM4KALN36Cn+DSjVX+med2EgyRLDK4cMGtoh803eee++qGdrKTnexkJxvkaNo3k9YeHvb7/fHlP8GRZ41sJ3Ft/ATd/eUJbS/6iSnOE9bKJ2YIOebWcrYBOjfpwtu89nQSYTciytjbmO6dSdm7CYxG0VnGERPaQs4cEs+dzWzfrM9ri22A2jY+881r8SDY87YAyvSgenFzhD9QB1tn/cBmYpLWS5FzxSma6mZKQtnuuIG48BGOaZQKRwyN8xVWBWpnEyhV+OuyAnmlvGZTOj9dFD4f5sK4Y7XdBC/11Om+Hbmpg1yq7CmY0DSoCFcYawmUsuylwEMazwfQMg3Sga0giILNIonSMdvO/IM0ZY+mQZr6zAbcjtkwCZSoCy3CWFsSoTA+dGZp4mEfTWAWzWZKCeVBQhcr4rKXtKzJYho32RT6WLzg3kgomVnnD6VMB/Wq7JFWSIGUdcIaRhUeuiXaLBp+E45bJlW9Edy0nwJJC604UBGuGV7yD0NKsoSIhWrSsK+BRIM2Uxrmkn8ozTADbWrNNc5Eug7S4ZxtaQyi0TLrRsxsrkY5rHiaeWzY10L6xCdV82vlJzqT4bH6e4e0PMlZsUdpJFRVTvkQo7NGKToLq6l0MRjuY1kW090SXnBtZzmmimYSJcS/oxi5EzSwW3IlpuSE5K6joTEiWWsdGud1J0pxioxavq9xBSsGLFNJx6dEGkisZe1VPl5O8M57pWjMoFF6aQZlD0huLmpWN+nFF43Q1MG3RL9+gJgmewEReh2Rtv9q09QBEvEmZkit4+Gc0L7fEMm6wUutAq+PG3voZd2GXz0+7eVbJw6w+mLi3xZlyQdcgEkFH/2QKT3NO5m/kVrsTp1T4NMH0ocwREO+1j35mlOgR/F0dgur6DXVbbrgeMiAjro3mkM0DxDMOsVFqHi4KmI9b9IeDGGZlW6NKrAGe9qLpdHMMEN2vZ6i5pZ852hAzJbRyBlq7n2CqDNDqRge9g/nWAedagf2F7MFFyhqF5EIMetpVWM1Hqq1U8SDVQUlRqwNS0TfARvYwjXsdUpNaNLK+U/Dj1DEpnaBlP3j5tYelFYxOwEnKAgz/MR+NtkzHXrf/trFvnsKwgjCMqwjonWXxNcBZnO66RArB4I/mHnNillvxVF+oDKgNOiT+Yb9j3OkewdQ9wsf2WwSy3OMg40+Jkx1K89haIqautQQgvovprTwYm7thkCn/Ag7fYKAskauQw+rA5jDHVDmgPcFAO2VXrOewsPFUcX6VYks/56u2nRZZEoUl7ZPSvZVLx8Zxf5E5Eh6bxFKlCdhH3iRm6IbFvIPqt/r0Ges65WB9FQI0QlZ9wB4RH+J6F+iOTr1AeHMNyaJO9QQ+9LmB1OTbpBoUihlVfCOZhN/esOxnBtQ5MBsEKnXVEe36Q5ZHm2AeoT/xY1wtqfeD/W6SWP+boyBXm9G/0af9Z+/HTuht1AUMq8apNVVVvBWbFvUPdrJTnayk/9OfgPpX7vwWLh13gAAAABJRU5ErkJggg==" alt="" class="piano-band-img">
+                  <div class="piano-tip">⇧ 代表 shift 键</div></div>
+                <div class="piano-key-wrap" style="height: 223.648px;">
+                  <div data-keycode="49" data-name="C2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">1</div>
+                      <div class="notename" style="display: none;">C2</div></div>
+                  </div>
+                  <div data-keycode="50" data-name="D2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">2</div>
+                      <div class="notename" style="display: none;">D2</div></div>
+                  </div>
+                  <div data-keycode="51" data-name="E2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">3</div>
+                      <div class="notename" style="display: none;">E2</div></div>
+                  </div>
+                  <div data-keycode="52" data-name="F2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">4</div>
+                      <div class="notename" style="display: none;">F2</div></div>
+                  </div>
+                  <div data-keycode="53" data-name="G2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">5</div>
+                      <div class="notename" style="display: none;">G2</div></div>
+                  </div>
+                  <div data-keycode="54" data-name="A2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">6</div>
+                      <div class="notename" style="display: none;">A2</div></div>
+                  </div>
+                  <div data-keycode="55" data-name="B2" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">7</div>
+                      <div class="notename" style="display: none;">B2</div></div>
+                  </div>
+                  <div data-keycode="56" data-name="C3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">8</div>
+                      <div class="notename" style="display: none;">C3</div></div>
+                  </div>
+                  <div data-keycode="57" data-name="D3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">9</div>
+                      <div class="notename" style="display: none;">D3</div></div>
+                  </div>
+                  <div data-keycode="48" data-name="E3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">0</div>
+                      <div class="notename" style="display: none;">E3</div></div>
+                  </div>
+                  <div data-keycode="81" data-name="F3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">Q</div>
+                      <div class="notename" style="display: none;">F3</div></div>
+                  </div>
+                  <div data-keycode="87" data-name="G3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">W</div>
+                      <div class="notename" style="display: none;">G3</div></div>
+                  </div>
+                  <div data-keycode="69" data-name="A3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">E</div>
+                      <div class="notename" style="display: none;">A3</div></div>
+                  </div>
+                  <div data-keycode="82" data-name="B3" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">R</div>
+                      <div class="notename" style="display: none;">B3</div></div>
+                  </div>
+                  <div data-keycode="84" data-name="C4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">T</div>
+                      <div class="notename" style="display: none;">C4</div></div>
+                  </div>
+                  <div data-keycode="89" data-name="D4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">Y</div>
+                      <div class="notename" style="display: none;">D4</div></div>
+                  </div>
+                  <div data-keycode="85" data-name="E4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">U</div>
+                      <div class="notename" style="display: none;">E4</div></div>
+                  </div>
+                  <div data-keycode="73" data-name="F4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">I</div>
+                      <div class="notename" style="display: none;">F4</div></div>
+                  </div>
+                  <div data-keycode="79" data-name="G4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">O</div>
+                      <div class="notename" style="display: none;">G4</div></div>
+                  </div>
+                  <div data-keycode="80" data-name="A4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">P</div>
+                      <div class="notename" style="display: none;">A4</div></div>
+                  </div>
+                  <div data-keycode="65" data-name="B4" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">A</div>
+                      <div class="notename" style="display: none;">B4</div></div>
+                  </div>
+                  <div data-keycode="83" data-name="C5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">S</div>
+                      <div class="notename" style="display: none;">C5</div></div>
+                  </div>
+                  <div data-keycode="68" data-name="D5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">D</div>
+                      <div class="notename" style="display: none;">D5</div></div>
+                  </div>
+                  <div data-keycode="70" data-name="E5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">F</div>
+                      <div class="notename" style="display: none;">E5</div></div>
+                  </div>
+                  <div data-keycode="71" data-name="F5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">G</div>
+                      <div class="notename" style="display: none;">F5</div></div>
+                  </div>
+                  <div data-keycode="72" data-name="G5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">H</div>
+                      <div class="notename" style="display: none;">G5</div></div>
+                  </div>
+                  <div data-keycode="74" data-name="A5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">J</div>
+                      <div class="notename" style="display: none;">A5</div></div>
+                  </div>
+                  <div data-keycode="75" data-name="B5" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">K</div>
+                      <div class="notename" style="display: none;">B5</div></div>
+                  </div>
+                  <div data-keycode="76" data-name="C6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">L</div>
+                      <div class="notename" style="display: none;">C6</div></div>
+                  </div>
+                  <div data-keycode="90" data-name="D6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">Z</div>
+                      <div class="notename" style="display: none;">D6</div></div>
+                  </div>
+                  <div data-keycode="88" data-name="E6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">X</div>
+                      <div class="notename" style="display: none;">E6</div></div>
+                  </div>
+                  <div data-keycode="67" data-name="F6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">C</div>
+                      <div class="notename" style="display: none;">F6</div></div>
+                  </div>
+                  <div data-keycode="86" data-name="G6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">V</div>
+                      <div class="notename" style="display: none;">G6</div></div>
+                  </div>
+                  <div data-keycode="66" data-name="A6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">B</div>
+                      <div class="notename" style="display: none;">A6</div></div>
+                  </div>
+                  <div data-keycode="78" data-name="B6" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">N</div>
+                      <div class="notename" style="display: none;">B6</div></div>
+                  </div>
+                  <div data-keycode="77" data-name="C7" class="piano-key wkey">
+                    <div class="keytip">
+                      <div class="keyname">M</div>
+                      <div class="notename" style="display: none;">C7</div></div>
+                  </div>
+                  <div class="bkey-wrap bkey-wrap1">
+                    <div data-keycode="b49" data-name="C#2" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>1</div></div>
+                    </div>
+                    <div data-keycode="b50" data-name="D#2" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>2</div></div>
+                    </div>
+                    <div data-keycode="b52" data-name="F#2" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>4</div></div>
+                    </div>
+                    <div data-keycode="b53" data-name="G#2" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>5</div></div>
+                    </div>
+                    <div data-keycode="b54" data-name="A#2" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>6</div></div>
+                    </div>
+                  </div>
+                  <div class="bkey-wrap bkey-wrap2">
+                    <div data-keycode="b56" data-name="C#3" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>8</div></div>
+                    </div>
+                    <div data-keycode="b57" data-name="D#3" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>9</div></div>
+                    </div>
+                    <div data-keycode="b81" data-name="F#3" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>Q</div></div>
+                    </div>
+                    <div data-keycode="b87" data-name="G#3" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>W</div></div>
+                    </div>
+                    <div data-keycode="b69" data-name="A#3" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>E</div></div>
+                    </div>
+                  </div>
+                  <div class="bkey-wrap bkey-wrap3">
+                    <div data-keycode="b84" data-name="C#4" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>T</div></div>
+                    </div>
+                    <div data-keycode="b89" data-name="D#4" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>Y</div></div>
+                    </div>
+                    <div data-keycode="b73" data-name="F#4" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>I</div></div>
+                    </div>
+                    <div data-keycode="b79" data-name="G#4" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>O</div></div>
+                    </div>
+                    <div data-keycode="b80" data-name="A#4" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>P</div></div>
+                    </div>
+                  </div>
+                  <div class="bkey-wrap bkey-wrap4">
+                    <div data-keycode="b83" data-name="C#5" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>S</div></div>
+                    </div>
+                    <div data-keycode="b68" data-name="D#5" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>D</div></div>
+                    </div>
+                    <div data-keycode="b71" data-name="F#5" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>G</div></div>
+                    </div>
+                    <div data-keycode="b72" data-name="G#5" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>H</div></div>
+                    </div>
+                    <div data-keycode="b74" data-name="A#5" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>J</div></div>
+                    </div>
+                  </div>
+                  <div class="bkey-wrap bkey-wrap5">
+                    <div data-keycode="b76" data-name="C#6" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>L</div></div>
+                    </div>
+                    <div data-keycode="b90" data-name="D#6" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>Z</div></div>
+                    </div>
+                    <div data-keycode="b67" data-name="F#6" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>C</div></div>
+                    </div>
+                    <div data-keycode="b86" data-name="G#6" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>V</div></div>
+                    </div>
+                    <div data-keycode="b66" data-name="A#6" class="piano-key bkey" style="height: 164.554px;">
+                      <div class="keytip">
+                        <div class="keyname">⇧
+                          <br>+
+                          <br>B</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              </div>
+          <div class="blank-page-pc" style="height: 200px;"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery3.min.js"></script>
+    <script src="js/Tone.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/piano.js"></script>
+  </body>
+
+</html>

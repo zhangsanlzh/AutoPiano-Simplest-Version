@@ -1,4 +1,4 @@
-# AutoPiano-Electron
+# AutoPiano-Simplest-Version
 
 
 抽出了项目 [AutoPiano](https://github.com/WarpPrism/AutoPiano) 的核心功能，是最简版本。
